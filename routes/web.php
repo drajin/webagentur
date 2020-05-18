@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+//Route::resource('blog','PostsController');
+Route::get('blog', 'PostsController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+include('admin_routes.php');
