@@ -18,10 +18,12 @@ Route::get('/', function () {
 });
 
 //Route::resource('blog','PostsController');
-Route::get('blog', 'PostsController@index');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/blog', 'PostsController@index');
+Route::get('/blog/{title}', 'PostsController@show')->name('blog.show');
 
 include('admin_routes.php');

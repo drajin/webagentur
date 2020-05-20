@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\PostStoreRequest;
 use App\Post;
 
-class PostsController extends Controller
+class AdminPostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +16,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->paginate(5);
-        return view('blog.index', compact('posts'));
+        $posts = Post::all();
+        return view('admin.posts.index',compact('posts'));
+
     }
 
     /**
@@ -25,7 +28,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
@@ -34,9 +37,13 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostStoreRequest $request)
     {
-        //
+        $post = new Post;
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+        return redirect()->route('posts.index')->with('success','Post created successfully!');
     }
 
     /**
@@ -45,10 +52,9 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($title)
+    public function show(Post $post)
     {
-        $post = Post::where('title', $title)->firstOrFail();
-        return view('blog.show', compact('post'));
+        return view('/admin.posts.show', compact('post'));
     }
 
     /**
@@ -57,9 +63,9 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+        return view('admin.posts.edit', compact('post'));
     }
 
     /**

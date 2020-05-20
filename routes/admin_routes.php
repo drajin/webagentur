@@ -10,7 +10,8 @@ Route::group([
        return view('admin.dashboard');
     });
 
-    Route::resource('posts','PostsController');
-    Route::resource('tags','TagsController');
+    Route::resource('posts','AdminPostsController');
+
+    Route::resource('tags','AdminTagsController');
 
 });

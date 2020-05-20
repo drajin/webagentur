@@ -204,7 +204,10 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-7">
                     <div class="section-tittle text-center">
-                        <h2>Choose Your Very Best Pricing Plan </h2>
+                        <h2>Wir heißen Sie willkommen! Ihre Ziele bestimmen unsere Vorgehensweise!
+                            <br>
+                            <small>Web Agentur Services</small>
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -215,13 +218,8 @@
                             <span  class="flaticon-growth"></span>
                         </div>
                         <div class="do-caption">
-                            <h4>$ 05.00</h4>
-                            <ul>
-                                <li>Increase traffic 50%</li>
-                                <li>Social Media Marketing</li>
-                                <li>10 Free Optimization</li>
-                                <li>24/7  support</li>
-                            </ul>
+                            <h4>Development Technologie & Software</h4>
+                            <p>Technologie bietet unzählige Vorteile. Unsere Aufgabe ist es daher, die optimale technische Umgebung für Sie zusammenzustellen. Eine, mit der Sie nicht nur heute, sondern auch morgen bestens gerüstet sind. Wir fördern eine skalierbare technische Infrastruktur, die unserer Erfahrung nach für den langfristigen Projekterfolg notwendig ist.</p>
                         </div>
                     </div>
                 </div>
@@ -231,13 +229,8 @@
                             <span class="flaticon-award"></span>
                         </div>
                         <div class="do-caption">
-                            <h4>$ 20.00</h4>
-                            <ul>
-                                <li>Increase traffic 50%</li>
-                                <li>Social Media Marketing</li>
-                                <li>10 Free Optimization</li>
-                                <li>24/7  support</li>
-                            </ul>
+                            <h4>Performance Strategie & Consulting</h4>
+                            <p>Wir setzen Ihre Unternehmensziele in digitale Projekte um. In einem sich ständig verändernden digitalen Umfeld wird die schnelle Anpassungsfähigkeit zu einem entscheidenden Erfolgsfaktor – auch in strategischen Fragen. Wer nicht nur ein Ziel vor Augen hat, sondern immer auch den Weg dorthin, der gewinnt.</p>
                         </div>
                     </div>
                 </div>
@@ -247,13 +240,10 @@
                             <span  class="flaticon-project"></span>
                         </div>
                         <div class="do-caption">
-                            <h4>$ 30.00</h4>
-                            <ul>
-                                <li>Increase traffic 50%</li>
-                                <li>Social Media Marketing</li>
-                                <li>10 Free Optimization</li>
-                                <li>24/7  support</li>
-                            </ul>
+                            <h4>Marketing Kreation & Kommunikation</h4>
+                            <p>Wir setzen auf starke Kommunikationskampagnen für Ihre Zielgruppen. Denn die Welt ist vernetzt und es ist unsere Aufgabe, das Nutzungsverhalten der Zielgruppen mit kreativen Kommunikationslösungen zu verknüpfen. Sprechen Sie Ihre Zielgruppe an. Und vor allem: bleiben Sie langfristig in Erinnerung.
+
+                            </p>
                         </div>
                     </div>
                 </div>

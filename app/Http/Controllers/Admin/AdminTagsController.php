@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Post;
 
-class PostsController extends Controller
+class AdminTagsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->paginate(5);
-        return view('blog.index', compact('posts'));
+
     }
 
     /**
@@ -45,10 +43,9 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($title)
+    public function show($id)
     {
-        $post = Post::where('title', $title)->firstOrFail();
-        return view('blog.show', compact('post'));
+        //
     }
 
     /**
