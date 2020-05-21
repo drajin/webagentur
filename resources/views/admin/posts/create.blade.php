@@ -5,7 +5,7 @@
     <link rel="stylesheet" text="text/css" href="{{ asset('css/select2-bootstrap.min.css') }}">
 @endsection
 
-@section('title', "Admin: New Post")
+@section('title', "Create new Post")
 
 @section('content')
     <div class="row">

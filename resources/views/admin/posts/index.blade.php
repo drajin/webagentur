@@ -42,7 +42,7 @@
                             <td><a href="{{route('posts.show', $post)}}">{{substr($post->body, 0, 40)}}{{ (strlen($post->body))>50 ? '..' : '' }}</a></td>
                             <td>{{date( 'j, M, Y', strtotime($post->created_at))}}</td>
                             <td><a href="{{route('posts.show', $post)}}" class="btn btn-primary">View</a></td>
-                            <td><a href="{{route('posts.edit', $post)}}" class="btn btn-primary">Edit</a></td>
+                            <td><a href="{{route('posts.edit', $post)}}" class="btn btn-warning">Edit</a></td>
                             <td>
                                 <form method="POST" action="{{ action('Admin\AdminPostsController@destroy', $post->id) }}" >
                                     @csrf
