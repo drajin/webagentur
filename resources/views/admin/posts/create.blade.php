@@ -15,22 +15,27 @@
 
             <form method='post' action="{{ action('Admin\AdminPostsController@store') }}" enctype="multipart/form-data">
                 @csrf
+
+
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input name="title" class="form-control" placeholder="Title">
+                    {!! $dataTable->input !!}
                 </div>
+
                 @error('title')
                 <strong>{{ $message }}</strong>
                 @enderror
 
                 <div class="form-group">
-                    <label>Body</label>
-                    <textarea class="form-control" name="body" rows="3" placeholder="Body"></textarea>
+                    <label for="body">Body</label>
+                    {!! $dataTable->text !!}
                 </div>
+
                 @error('body')
                 <strong>{{ $message }}</strong>
                 @enderror
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Create Post</button>
+
+                    {!! $dataTable->button !!}
 
             </form>
         </div>

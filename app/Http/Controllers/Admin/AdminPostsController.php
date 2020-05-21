@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostStoreRequest;
 use App\Post;
+use App\DataTable\PostsDataTable;
 
 class AdminPostsController extends Controller
 {
@@ -26,9 +27,10 @@ class AdminPostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(PostsDataTable $dataTable)
     {
-        return view('admin.posts.create');
+        $dataTable = $dataTable->button('Create Post')->text()->input();
+        return view('admin.posts.create', compact('dataTable'));
     }
 
     /**
@@ -63,9 +65,10 @@ class AdminPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Post $post, PostsDataTable $dataTable)
     {
-        return view('admin.posts.edit', compact('post'));
+        $dataTable = $dataTable->button('Update Post')->text($post->body)->input($post->title);
+        return view('admin.posts.edit', compact('post', 'dataTable'));
     }
 
     /**

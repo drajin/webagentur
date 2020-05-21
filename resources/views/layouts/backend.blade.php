@@ -33,7 +33,7 @@
     <div class="sidebar">
         <ul>
             <li><a href="/" target="_blank"><i class="fa fa-home"></i><span>Veiw Front Page</span></a></li>
-            <li><a href="/admin"><i class="fa fa-desktop"></i><span>Dashboard</span></a></li>
+            <li><a href="/admin"><i class="fa fa-desktop hovered"></i><span>Dashboard</span></a></li>
             <li><a href="{{route('posts.index')}}"><i class="fa fa-pencil-square-o"></i><span>Posts</span></a></li>
             <li><a href="{{route('tags.index')}}"><i class="fa fa-hashtag"></i><span>Tags</span></a></li>
             <li><a href="#"><i class="fa fa-envelope-o"></i><span>Messages</span></a></li>

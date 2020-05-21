@@ -16,9 +16,10 @@
             <form method='post' action="{{ action('Admin\AdminPostsController@update', $post) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
+
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input name="title" value="{{$post->title}}" class="form-control" placeholder="Title">
+                    {!! $dataTable->input !!}
                 </div>
                 @error('title')
                 <strong>{{ $message }}</strong>
@@ -26,12 +27,12 @@
 
                 <div class="form-group">
                     <label>Body</label>
-                    <textarea name="body" rows="10" class="form-control" placeholder="Body">{{$post->body}}</textarea>
+                    {!! $dataTable->text !!}
                 </div>
                 @error('body')
                 <strong>{{ $message }}</strong>
                 @enderror
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Update Post</button>
+                {!! $dataTable->button !!}
 
             </form>
         </div>
@@ -54,7 +55,7 @@
                 <div class="col-sm-6">
                     <form method="POST" action="{{ action('Admin\AdminPostsController@destroy', $post->id) }}" >
                         @csrf
-                        <input type="hidden" name="_method" value="delete">
+                            <input type="hidden" name="_method" value="delete">
                         <div id="operations">
                             <input type="submit" name="commit" class="btn btn-danger btn-block" value="Delete" />
                         </div>
