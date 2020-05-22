@@ -26,8 +26,17 @@
                 @enderror
 
                 <div class="form-group">
+                    <label for="title">Slug</label>
+                    {!! $dataTable->slug !!}
+                </div>
+                @error('slug')
+                <strong>{{ $message }}</strong>
+                @enderror
+
+                <div class="form-group">
                     <label>Body</label>
                     {!! $dataTable->text !!}
+                    @include('inc.ckeditor')
                 </div>
                 @error('body')
                 <strong>{{ $message }}</strong>

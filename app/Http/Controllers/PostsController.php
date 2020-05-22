@@ -45,9 +45,9 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($title)
+    public function show($slug)
     {
-        $post = Post::where('title', $title)->firstOrFail();
+        $post = Post::where('slug', $slug)->firstOrFail();
         return view('blog.show', compact('post'));
     }
 

@@ -38,8 +38,8 @@
                     @foreach($posts as $post)
                         <tr>
                             <th>{{$post->id}}</th>
-                            <td><a href="{{route('posts.show', $post)}}">{{$post->title}}</a></td>
-                            <td><a href="{{route('posts.show', $post)}}">{{substr($post->body, 0, 40)}}{{ (strlen($post->body))>50 ? '..' : '' }}</a></td>
+                            <td><a href="{{ route('posts.show', $post) }}">{!! $post->title !!}</a></td>
+                            <td><a href="{{ route('posts.show', $post) }}">{!! substr($post->body, 0, 40)!!}{{ (strlen($post->body))>50 ? '...' : '' }}</a></td>
                             <td>{{date( 'j, M, Y', strtotime($post->created_at))}}</td>
                             <td><a href="{{route('posts.show', $post)}}" class="btn btn-primary">View</a></td>
                             <td><a href="{{route('posts.edit', $post)}}" class="btn btn-warning">Edit</a></td>
@@ -56,6 +56,8 @@
                     @endforeach
                     </tbody>
                 </table>
+                <!-- Pagination -->
+                @include('inc.pagination', ['value' => $posts])
             </div>
 
             </div>

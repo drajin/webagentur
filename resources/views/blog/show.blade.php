@@ -32,12 +32,12 @@
                                 <img class="img-fluid" src="{{asset('assets/img/blog/single_blog_1.png')}}" alt="">
                             </div>
                             <div class="blog_details">
-                                <h2>{{$post->title}}</h2>
+                                <h2>{!! $post->title !!}</h2>
                                 <ul class="blog-info-link mt-3 mb-4">
                                     <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
                                     <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                 </ul>
-                                <p>{{$post->body}}</p>
+                                <p>{!! $post->body !!}</p>
 
                             </div>
                         </div>

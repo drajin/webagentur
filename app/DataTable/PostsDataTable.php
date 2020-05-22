@@ -5,6 +5,7 @@ namespace App\DataTable;
 class PostsDataTable {
 
     public $input;
+    public $slug;
     public $text;
     public $button;
 
@@ -17,13 +18,21 @@ class PostsDataTable {
         return $this;
     }
 
+    public function slug($value='')
+    {
+        $this->slug = '<input name="slug" class="form-control" placeholder="Slug" value="';
+        $this->slug .= $value;
+        $this->slug .= '">';
+        return $this;
+    }
+
 
 
 
     public function text($value='')
     {
 
-        $this->text = '<textarea class="form-control" name="body" rows="10" placeholder="Body">';
+        $this->text = '<textarea id="summary-ckeditor" class="form-control" name="body" rows="10" placeholder="Body">';
         $this->text .= $value;
         $this->text .= '</textarea>';
         return $this;

@@ -17,7 +17,7 @@ class AdminPostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->paginate(5);
         return view('admin.posts.index',compact('posts'));
 
     }
@@ -29,7 +29,7 @@ class AdminPostsController extends Controller
      */
     public function create(PostsDataTable $dataTable)
     {
-        $dataTable = $dataTable->button('Create Post')->text()->input();
+        $dataTable = $dataTable->button('Create Post')->text()->input()->slug();
         return view('admin.posts.create', compact('dataTable'));
     }
 
@@ -43,6 +43,7 @@ class AdminPostsController extends Controller
     {
         $post = new Post;
         $post->title = $request->title;
+        $post->slug = $request->slug;
         $post->body = $request->body;
         $post->save();
         return redirect()->route('posts.index')->with('success','Post created successfully!');
@@ -67,7 +68,7 @@ class AdminPostsController extends Controller
      */
     public function edit(Post $post, PostsDataTable $dataTable)
     {
-        $dataTable = $dataTable->button('Update Post')->text($post->body)->input($post->title);
+        $dataTable = $dataTable->button('Update Post')->text($post->body)->input($post->title)->slug($post->slug);
         return view('admin.posts.edit', compact('post', 'dataTable'));
     }
 
@@ -81,6 +82,7 @@ class AdminPostsController extends Controller
     public function update(Request $request, Post $post)
     {
         $post->title = $request->input('title');
+        $post->slug = $request->input('slug');
         $post->body = $request->input('body');
         //$post->tags = $request->input('tags');
         $post->save();

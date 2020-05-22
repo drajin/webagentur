@@ -39,10 +39,10 @@
                             </div>
 
                             <div class="blog_details">
-                                <a class="d-inline-block" href="{{route('blog.show', $post->title)}}">
-                                    <h2>{{$post->title}}</h2>
+                                <a class="d-inline-block" href="{{route('blog.show', $post->slug)}}">
+                                    <h2>{!! $post->title !!}</h2>
                                 </a>
-                                <p>{{$post->body}}</p>
+                                <p>{!! $post->body !!}</p>
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
                                     <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
