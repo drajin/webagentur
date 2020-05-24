@@ -22,7 +22,7 @@
                     {!! $dataTable->input !!}
                 </div>
                 @error('title')
-                <strong>{{ $message }}</strong>
+                    <div class="text-danger">{{ $message }}</div>
                 @enderror
 
                 <div class="form-group">
@@ -30,7 +30,7 @@
                     {!! $dataTable->slug !!}
                 </div>
                 @error('slug')
-                <strong>{{ $message }}</strong>
+                    <div class="text-danger">{{ $message }}</div>
                 @enderror
 
                 <div class="form-group">
@@ -39,7 +39,7 @@
                     @include('inc.ckeditor')
                 </div>
                 @error('body')
-                <strong>{{ $message }}</strong>
+                    <div class="text-danger">{{ $message }}</div>
                 @enderror
                 {!! $dataTable->button !!}
 
@@ -49,7 +49,7 @@
     <div class="col-md-4">
         <div class="card card-body bg-light">
             <dl class="dl-horizontal">
-                <dt>Create At:</dt>
+                <dt>Created At:</dt>
                 <dd>{{$post->created_at}}</dd>
             </dl>
             <dl class="dl-horizontal">

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Tag;
 
 class AdminTagsController extends Controller
 {
@@ -13,17 +15,8 @@ class AdminTagsController extends Controller
      */
     public function index()
     {
-
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $tags = Tag::all();
+        return view('admin.tags.index', compact('tags'));
     }
 
     /**
@@ -34,7 +27,14 @@ class AdminTagsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'tag_name' => 'required|max:255'
+        ]);
+        $tag = new Tag;
+        $tag->name = $request->tag_name;
+        $tag->save();
+
+        return redirect(route('tags.index'))->with('success', 'Tag added');
     }
 
     /**
@@ -43,9 +43,9 @@ class AdminTagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tag $tag)
     {
-        //
+        return view('admin.tags.show', compact('tag'));
     }
 
     /**
@@ -54,9 +54,9 @@ class AdminTagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Tag $tag)
     {
-        //
+        return view('admin.tags.edit', compact('tag'));
     }
 
     /**
@@ -66,9 +66,14 @@ class AdminTagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tag $tag)
     {
-        //
+        $request->validate([
+            'tag_name' => 'required|max:255'
+        ]);
+        $tag->name = $request->tag_name;
+        $tag->save();
+        return  redirect(route('tags.index'))->with('success', 'Tag updated');;
     }
 
     /**
@@ -77,8 +82,9 @@ class AdminTagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tag $tag)
     {
-        //
+        $tag->delete();
+        return redirect()->route('posts.index')->with('success', 'Tag removed');
     }
 }

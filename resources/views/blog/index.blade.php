@@ -1,5 +1,5 @@
 
-    @extends('/layouts.front')
+    @extends('/layouts.frontend')
 
     @section('content')
 
@@ -42,8 +42,9 @@
                                 <a class="d-inline-block" href="{{route('blog.show', $post->slug)}}">
                                     <h2>{!! $post->title !!}</h2>
                                 </a>
-                                <p>{!! $post->body !!}</p>
-                                <ul class="blog-info-link">
+                                <p>{!! substr($post->body, 0, 250) !!}{{ strlen($post->body) > 250 ? '...' : "" }}</p>
+                                    <a href="{{route('blog.show', $post->slug)}}" class="genric-btn link circle float-right">Read More</a>
+                                    <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
                                     <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                 </ul>

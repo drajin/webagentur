@@ -11,7 +11,6 @@ Route::group([
     });
 
     Route::resource('posts','AdminPostsController');
-
-    Route::resource('tags','AdminTagsController');
+    Route::resource('tags','AdminTagsController', ['except' => ['create']]);
 
 });

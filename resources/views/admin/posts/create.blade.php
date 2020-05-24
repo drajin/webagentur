@@ -22,7 +22,7 @@
                     {!! $dataTable->input !!}
                 </div>
                 @error('title')
-                <strong>{{ $message }}</strong>
+                    <div class="text-danger">{{ $message }}</div>
                 @enderror
 
                 <div class="form-group">
@@ -30,7 +30,7 @@
                     {!! $dataTable->slug !!}
                 </div>
                 @error('slug')
-                <strong>{{ $message }}</strong>
+                    <div class="text-danger">{{ $message }}</div>
                 @enderror
 
                 <div class="form-group">
@@ -40,7 +40,7 @@
                 </div>
 
                 @error('body')
-                <strong>{{ $message }}</strong>
+                    <div class="text-danger">{{ $message }}</div>
                 @enderror
                     {!! $dataTable->button !!}
             </form>
