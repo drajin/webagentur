@@ -7,6 +7,7 @@ class PostsDataTable {
     public $input;
     public $slug;
     public $text;
+    public $select;
     public $button;
 
 
@@ -26,9 +27,6 @@ class PostsDataTable {
         return $this;
     }
 
-
-
-
     public function text($value='')
     {
 
@@ -44,6 +42,20 @@ class PostsDataTable {
         $this->button = '<button type="submit" class="btn btn-primary btn-lg btn-block">';
         $this->button .= $value;
         $this->button .= '</button>';
+        return $this;
+    }
+
+    public function select($tags, $selected_tags=[])
+    {
+        $this->select = '<select multiple class="form-control select2-multiple" name="tags[]" >';
+        foreach($tags as $key => $tag) {
+            $this->select .= '<option value="' .$key.'"';
+            if(in_array($tag, $selected_tags)) {
+                $this->select .= 'selected';
+            }
+            $this->select .= '>' . $tag . '</option>';
+        }
+        $this->select .= '</select>';
         return $this;
     }
 

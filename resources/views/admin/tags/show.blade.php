@@ -46,7 +46,7 @@
                                     <span class="badge badge-secondary">{{$tag->name}}</span>
                                         @endforeach
                                 </td>
-                                <td><a href="{{route('posts.edit', $post->id)}}" class="btn btn-outline-dark btn-sm">View</a></td>
+                                <td><a href="{{route('posts.show', $post->id)}}" class="btn btn-outline-dark btn-sm">View</a></td>
                             </tr>
                             @endforeach
                     </tbody>

@@ -45,7 +45,9 @@
                                 <p>{!! substr($post->body, 0, 250) !!}{{ strlen($post->body) > 250 ? '...' : "" }}</p>
                                     <a href="{{route('blog.show', $post->slug)}}" class="genric-btn link circle float-right">Read More</a>
                                     <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                        @foreach($post->tags as $tag)
+                                            <li><a href="#"><i class="fa fa-user"></i>{{$tag->name}}</a></li>
+                                        @endforeach
                                     <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                 </ul>
                             </div>

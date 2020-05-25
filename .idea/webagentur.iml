@@ -107,6 +107,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="izrada_sajta" />
   </component>
 </module>

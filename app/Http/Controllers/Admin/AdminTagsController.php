@@ -84,6 +84,7 @@ class AdminTagsController extends Controller
      */
     public function destroy(Tag $tag)
     {
+        $tag->posts()->detach();
         $tag->delete();
         return redirect()->route('posts.index')->with('success', 'Tag removed');
     }

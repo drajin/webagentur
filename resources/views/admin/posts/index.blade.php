@@ -32,7 +32,7 @@
                         <th>Created At</th>
                         <th>&nbsp</th>
                         <th>&nbsp</th>
-                        <th>&nbsp</th>
+{{--      Delete                  <th>&nbsp</th>--}}
                     </thead>
                     <tbody>
                     @foreach($posts as $post)
@@ -41,17 +41,17 @@
                             <td><a href="{{ route('posts.show', $post) }}">{!! $post->title !!}</a></td>
                             <td><a href="{{ route('posts.show', $post) }}">{!! substr($post->body, 0, 40)!!}{{ (strlen($post->body))>50 ? '...' : '' }}</a></td>
                             <td class="text-nowrap">{{date( 'j, M, Y', strtotime($post->created_at))}}</td>
-                            <td><a href="{{route('posts.show', $post)}}" class="btn btn-primary">View</a></td>
-                            <td><a href="{{route('posts.edit', $post)}}" class="btn btn-warning">Edit</a></td>
-                            <td>
-                                <form method="POST" action="{{ action('Admin\AdminPostsController@destroy', $post->id) }}" >
-                                    @csrf
-                                    <input type="hidden" name="_method" value="delete">
-                                    <div id="operations">
-                                        <input type="submit" name="commit" class="btn btn-danger float-right" value="Delete" />
-                                    </div>
-                                </form>
-                            </td>
+                            <td><a href="{{route('posts.show', $post)}}" class="btn btn-secondary">View</a></td>
+                            <td><a href="{{route('posts.edit', $post)}}" class="btn btn-secondary">Edit</a></td>
+{{--      Delete                      <td>--}}
+{{--                                <form method="POST" action="{{ action('Admin\AdminPostsController@destroy', $post->id) }}" >--}}
+{{--                                    @csrf--}}
+{{--                                    <input type="hidden" name="_method" value="delete">--}}
+{{--                                    <div id="operations">--}}
+{{--                                        <input type="submit" name="commit" class="btn btn-danger float-right" value="Delete" />--}}
+{{--                                    </div>--}}
+{{--                                </form>--}}
+{{--                            </td>--}}
                         </tr>
                     @endforeach
                     </tbody>
