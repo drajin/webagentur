@@ -55,6 +55,34 @@
                 </div>
             </div>
         </div>
+        <div id="backend-comments" style="margin-top: 50px">
+            <h3>Comments <small>{{$post->comments->count()}}</small></h3>
+        </div>
+        <div class="col-sm-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Author</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Comment</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($post->comments as $comment)
+                        <tr>
+                            <td>{{$comment->author}}</td>
+                            <td>{{$comment->email}}</td>
+                            <td>{{$comment->body}}</td>
+                            <td>
+                                <a href="{{route('comments.edit', $comment)}}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="{{route('comments.delete', $comment)}}" class="btn btn-sm btn-danger"><i class="fas fa-trash" ></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
 
     </div>
     </div>

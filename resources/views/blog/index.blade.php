@@ -28,7 +28,7 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
 
-                        @foreach($posts as $post)
+                        @forelse($posts as $post)
                         <article class="blog_item">
                             <div class="blog_item_img">
                                 <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
@@ -42,17 +42,19 @@
                                 <a class="d-inline-block" href="{{route('blog.show', $post->slug)}}">
                                     <h2>{!! $post->title !!}</h2>
                                 </a>
-                                <p>{!! substr($post->body, 0, 250) !!}{{ strlen($post->body) > 250 ? '...' : "" }}</p>
+                                <p>{!! $post->ShortContent  !!}</p>
                                     <a href="{{route('blog.show', $post->slug)}}" class="genric-btn link circle float-right">Read More</a>
                                     <ul class="blog-info-link">
                                         @foreach($post->tags as $tag)
-                                            <li><a href="#"><i class="fa fa-user"></i>{{$tag->name}}</a></li>
+                                            <li><a href="/blog?tag={{$tag->name}}"><i class="fa fa-user"></i>{{$tag->name}}</a></li>
                                         @endforeach
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="{{route('blog.show', $post->slug)}}#comments-area"><i class="fa fa-comments"></i>{{$post->comments->count()}}  Comments</a></li>
                                 </ul>
                             </div>
                         </article>
-                        @endforeach
+                        @empty
+                            <p>Nichts gefunden...</p>
+                        @endforelse
 
                         <article class="blog_item">
                             <div class="blog_item_img">

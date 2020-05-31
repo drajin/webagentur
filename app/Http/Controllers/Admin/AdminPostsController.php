@@ -35,7 +35,7 @@ class AdminPostsController extends Controller
         $dataTable = $dataTable
                 ->button('Create Post')
                 ->text()
-                ->input()
+                ->input('title')
                 ->slug()
                 ->select($tags);
         return view('admin.posts.create', compact('dataTable','tags'));

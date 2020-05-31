@@ -29,6 +29,7 @@
                         <th>#</th>
                         <th>Title</th>
                         <th>Body</th>
+                        <th>Comments</th>
                         <th>Created At</th>
                         <th>&nbsp</th>
                         <th>&nbsp</th>
@@ -40,6 +41,7 @@
                             <th>{{$post->id}}</th>
                             <td><a href="{{ route('posts.show', $post) }}">{!! $post->title !!}</a></td>
                             <td><a href="{{ route('posts.show', $post) }}">{!! substr($post->body, 0, 40)!!}{{ (strlen($post->body))>50 ? '...' : '' }}</a></td>
+                            <td class="text-center"><a href="{{ route('posts.show', $post) }}">{{ $post->comments->count() }}</a></td>
                             <td class="text-nowrap">{{date( 'j, M, Y', strtotime($post->created_at))}}</td>
                             <td><a href="{{route('posts.show', $post)}}" class="btn btn-secondary">View</a></td>
                             <td><a href="{{route('posts.edit', $post)}}" class="btn btn-secondary">Edit</a></td>

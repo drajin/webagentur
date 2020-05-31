@@ -13,6 +13,7 @@ class PostsDataTable {
 
     public function input($value='')
     {
+        //reusable $this->input = '<input name="'.$title.'" class="form-control" placeholder="'.$title->ucfirst().'" value="';
         $this->input = '<input name="title" class="form-control" placeholder="Title" value="';
         $this->input .= $value;
         $this->input .= '">';

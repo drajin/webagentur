@@ -27,7 +27,7 @@
                     {!! $dataTable->input !!}
                 </div>
                 @error('title')
-                    <div class="text-danger">{{ $message }}</div>
+                    <div class="text-danger"><small>{{ $message }}</small></div>
                 @enderror
 
                 <div class="form-group">
@@ -35,7 +35,7 @@
                     {!! $dataTable->slug !!}
                 </div>
                 @error('slug')
-                    <div class="text-danger">{{ $message }}</div>
+                    <div class="text-danger"><small>{{ $message }}</small></div>
                 @enderror
 
                 <div class="form-group">
@@ -44,7 +44,7 @@
                     @include('inc.ckeditor')
                 </div>
                 @error('body')
-                    <div class="text-danger">{{ $message }}</div>
+                    <div class="text-danger"><small>{{ $message }}</small></div>
                 @enderror
 
                 <div class="form-group">

@@ -11,4 +11,15 @@ class Post extends Model
         return $this->belongsToMany('App\Tag');
 
     }
+
+    public function getShortContentAttribute()
+    {
+        return substr($this->body, 0, 100) . '...';
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
 }

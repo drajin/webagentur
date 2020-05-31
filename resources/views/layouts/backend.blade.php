@@ -8,7 +8,7 @@
 
     @yield('stylesheets')
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/1b23c9e831.js" crossorigin="anonymous"></script>
 
     <meta charset="utf-8">
     <meta name="viewport"
@@ -32,12 +32,12 @@
     </div>
     <div class="sidebar">
         <ul>
-            <li><a href="/" target="_blank"><i class="fa fa-home"></i><span>Veiw Front Page</span></a></li>
-            <li><a href="/admin"><i class="fa fa-desktop hovered"></i><span>Dashboard</span></a></li>
-            <li><a href="{{route('posts.index')}}"><i class="fa fa-pencil-square-o"></i><span>Posts</span></a></li>
-            <li><a href="{{route('tags.index')}}"><i class="fa fa-hashtag"></i><span>Tags</span></a></li>
-            <li><a href="#"><i class="fa fa-envelope-o"></i><span>Messages</span></a></li>
-            <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>
+            <li><a href="/" target="_blank"><i class="fas fa-home"></i><span>Veiw Front Page</span></a></li>
+            <li><a href="/admin"><i class="fas fa-network-wired hovered"></i><span>Dashboard</span></a></li>
+            <li><a href="{{route('posts.index')}}"><i class="far fa-edit"></i><span>Posts</span></a></li>
+            <li><a href="{{route('tags.index')}}"><i class="fas fa-hashtag"></i><span>Tags</span></a></li>
+            <li><a href="#"><i class="far fa-envelope"></i><span>Messages</span></a></li>
+            <li><a href="#"><i class="far fa-comments"></i><span>Data Table</span></a></li>
         </ul>
     </div>
 

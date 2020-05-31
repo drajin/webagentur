@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Tag;
 
 class PostsController extends Controller
 {
@@ -14,7 +15,12 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->paginate(5);
+        if(request('tag')) {
+            $posts = Tag::where('name', request('tag'))->firstOrFail()->posts;
+        } else {
+            $posts = Post::latest()->paginate(5);
+        }
+
         return view('blog.index', compact('posts'));
     }
 
