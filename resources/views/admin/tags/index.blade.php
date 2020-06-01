@@ -34,8 +34,8 @@
                     @csrf
                         <div class="form-group">
                             <label for="title">Tag Name</label>
-                            <input type="text" name="tag_name" class="form-control" placeholder="Tag name">
-                                @error('tag_name')
+                            <input type="text" name="name" class="form-control" placeholder="Tag name">
+                                @error('name')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                         </div>

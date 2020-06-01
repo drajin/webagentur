@@ -136,7 +136,7 @@
                     </div>
                     <div class="col-lg-8">
 {{--ffffff--}}
-                        <form class="form-contact contact_form" action="/contact" method="post" {{-- javascript submit id="contactForm"--}} novalidate="novalidate">
+                        <form class="form-contact contact_form" action="{{url('contact')}}" method="post" {{-- javascript submit id="contactForm"--}} novalidate="novalidate">
                             @csrf
                             <div class="row">
                                 <div class="col-12">

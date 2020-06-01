@@ -190,23 +190,33 @@
                         </div>
                         <div class="comment-form">
                             <h4>Leave a Reply</h4>
+                            @include('/inc.messages')
                             <form class="form-contact comment_form" action="{{route('blog.show',$post->id)}}" method="post" id="commentForm">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group">
-                              <textarea class="form-control w-100" name="body" id="comment" cols="30" rows="9"
+                                            <textarea class="form-control w-100" name="body" id="comment" cols="30" rows="9"
                                         placeholder="Inhalt"></textarea>
+                                            @error('body')
+                                                <div class="text-danger"><small>{{ $message }}</small></div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input class="form-control" name="name" id="name" type="text" placeholder="Name">
+                                            <input class="form-control" name="author" id="name" type="text" placeholder="Name">
+                                            @error('author')
+                                                <div class="text-danger"><small>{{ $message }}</small></div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                                            @error('email')
+                                                <div class="text-danger"><small>{{ $message }}</small></div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>

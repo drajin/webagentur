@@ -16,14 +16,12 @@ class AdminCommentsController extends Controller
         return view('admin.comments.edit', compact('comment'));
     }
 
-    public function update(Request $request, Comment $comment)
+    public function update(Comment $comment)
     {
-        $request->validate([
+        $comment->update(request()->validate([
             'body' => 'required'
-        ]);
+        ]));
 
-        $comment->body = $request->body;
-        $comment->save();
         return redirect()->route('posts.show', $comment->post->id)->with('success', 'Comment Edited');
 
     }

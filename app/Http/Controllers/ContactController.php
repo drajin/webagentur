@@ -2,25 +2,27 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Http\Requests\ContactStoreRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function store(Request $request)
+
+    public function get_contact()
     {
-        $request->validate([
-            'message' => 'required', 'string',
-            'name' => 'required|max:120',
-            'email'=>'required|email',
-            'subject' => 'required', 'string'
-        ]);
+        return view('contact');
+    }
+
+    public function store(ContactStoreRequest $request)
+    {
 
         $data = [
-           'received_message' => $request->message,
-            'name' => $request->name,
-            'email' => $request->email,
-            'subject' => $request->subject
+           'received_message' => request('message'),
+            'name' => request('name'),
+            'email' => request('email'),
+            'subject' => request('subject')
         ];
 
         Mail::send('emails.contact', $data, function($message) use ($data)    {

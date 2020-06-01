@@ -20,6 +20,7 @@ class AdminPostsController extends Controller
     public function index()
     {
         $posts = Post::latest()->paginate(5);
+
         return view('admin.posts.index',compact('posts'));
 
     }
@@ -34,9 +35,9 @@ class AdminPostsController extends Controller
         $tags = Tag::pluck('name', 'id');
         $dataTable = $dataTable
                 ->button('Create Post')
-                ->text()
-                ->input('title')
+                ->input()
                 ->slug()
+                ->text()
                 ->select($tags);
         return view('admin.posts.create', compact('dataTable','tags'));
     }
@@ -49,13 +50,13 @@ class AdminPostsController extends Controller
      */
     public function store(PostStoreRequest $request)
     {
-        $post = new Post;
-        $post->title = $request->title;
-        $post->slug = $request->slug;
-        $post->body = $request->body;
-        $post->save();
+        $post = Post::create([
+            'title' => request('title'),
+            'slug' => request('slug'),
+            'body' => request('body')
+        ]);
 
-        $post->tags()->sync($request->tags, false);
+        $post->tags()->sync(request('tags'), false);
 
         return redirect()->route('posts.index')->with('success','Post created successfully!');
     }
@@ -88,14 +89,13 @@ class AdminPostsController extends Controller
 //        foreach($tags as $tag){
 //            $tags3[$tag->id] = $tag->name;
 //        }
-
-
         $dataTable = $dataTable
                 ->button('Update Post')
                 ->text($post->body)
                 ->input($post->title)
                 ->slug($post->slug)
                 ->select($tags, $selected_tags);
+
         return view('admin.posts.edit', compact('post', 'dataTable', 'tags'));
     }
 
@@ -108,10 +108,11 @@ class AdminPostsController extends Controller
      */
     public function update(PostUpdateRequest $request, Post $post)
     {
-        $post->title = $request->input('title');
-        $post->slug = $request->input('slug');
-        $post->body = $request->input('body');
-        $post->save();
+        $post->update([
+            'title' => request('title'),
+            'slug' => request('slug'),
+            'body' => request('body')
+        ]);
 
         $post->tags()->sync($request->tags);
 

@@ -16,6 +16,7 @@ class AdminTagsController extends Controller
     public function index()
     {
         $tags = Tag::all();
+
         return view('admin.tags.index', compact('tags'));
     }
 
@@ -25,14 +26,17 @@ class AdminTagsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $request->validate([
-            'tag_name' => 'required|max:255'
-        ]);
-        $tag = new Tag;
-        $tag->name = $request->tag_name;
-        $tag->save();
+        Tag::create(request()->validate([
+            'name' => 'required|max:255'
+        ]));
+//        $request->validate([
+//            'tag_name' => 'required|max:255'
+//        ]);
+//        $tag = new Tag;
+//        $tag->name = $request->tag_name;
+//        $tag->save();
 
         return redirect(route('tags.index'))->with('success', 'Tag added');
     }
@@ -66,13 +70,17 @@ class AdminTagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tag $tag)
+    public function update(Tag $tag)
     {
-        $request->validate([
-            'tag_name' => 'required|max:255'
-        ]);
-        $tag->name = $request->tag_name;
-        $tag->save();
+        $tag->update(request()->validate([
+            'name' => 'required|max:255'
+        ]));
+
+//        $request->validate([
+//            'name' => 'required|max:255'
+//        ]);
+//        $tag->name = $request->name;
+//        $tag->save();
         return  redirect(route('tags.index'))->with('success', 'Tag updated');;
     }
 

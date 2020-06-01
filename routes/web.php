@@ -27,9 +27,10 @@ Route::get('/blog', 'PostsController@index');
 
 
 Route::get('/blog/{title}', 'PostsController@show')->name('blog.show');
-Route::get('/contact', function(){
-    return view('contact');
-});
+
+//Contacts
+Route::get('/contact', 'ContactController@get_contact');
+Route::post('/contact', 'ContactController@store');
 
 //Comments
 Route::post('/blog/{title}', 'CommentsController@store')->name('edit.comments');
