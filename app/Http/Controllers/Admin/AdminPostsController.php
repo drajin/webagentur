@@ -9,6 +9,8 @@ use App\Http\Requests\PostStoreRequest;
 use App\Post;
 use App\Tag;
 use App\DataTable\PostsDataTable;
+use Image;
+use Storage;
 
 class AdminPostsController extends Controller
 {
@@ -50,11 +52,28 @@ class AdminPostsController extends Controller
      */
     public function store(PostStoreRequest $request)
     {
-        $post = Post::create([
-            'title' => request('title'),
-            'slug' => request('slug'),
-            'body' => request('body')
-        ]);
+        $post = new Post;
+        $post->title = request('title');
+        $post->slug = request('slug');
+        $post->body = request('body');
+
+
+
+//        $post = Post::create([
+//            'title' => request('title'),
+//            'slug' => request('slug'),
+//            'body' => request('body')
+//        ]);
+
+        if(request('featured_image')) {
+            $image = $request->file('featured_image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/' . $filename);
+            Image::make($image)->resize(750, 375)->save($location);
+
+            $post->image = $filename;
+        }
+        $post->save();
 
         $post->tags()->sync(request('tags'), false);
 
@@ -108,11 +127,29 @@ class AdminPostsController extends Controller
      */
     public function update(PostUpdateRequest $request, Post $post)
     {
-        $post->update([
-            'title' => request('title'),
-            'slug' => request('slug'),
-            'body' => request('body')
-        ]);
+//        $post->update([
+//            'title' => request('title'),
+//            'slug' => request('slug'),
+//            'body' => request('body')
+//        ]);
+
+        $post->title = request('title');
+        $post->slug = request('slug');
+        $post->body = request('body');
+
+        if($request->hasFile('featured_image')) {
+            $image = $request->file('featured_image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/' . $filename);
+            Image::make($image)->resize(750, 375)->save($location);
+            $old_file_name = $post->image;
+
+            $post->image = $filename;
+
+            Storage::delete($old_file_name);
+        }
+
+        $post->save();
 
         $post->tags()->sync($request->tags);
 
@@ -125,9 +162,13 @@ class AdminPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Post $post, Request $request)
     {
         $post->tags()->detach();
+
+        if($post->image) {
+            Storage::delete($post->image);
+        }
         $post->delete();
         return redirect()->route('posts.index')->with('success', 'Post removed');
     }

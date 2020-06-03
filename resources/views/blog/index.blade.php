@@ -31,7 +31,7 @@
                         @forelse($posts as $post)
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
+                                <img class="card-img rounded-0" src="{{asset('images/'.$post->image)}}" alt="">
                                 <a href="#" class="blog_item_date">
                                     <h3>Posted on:</h3>
                                     <p>{{ $post->created_at }}</p>

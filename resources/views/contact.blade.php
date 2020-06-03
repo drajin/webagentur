@@ -1,72 +1,6 @@
 @extends('layouts.frontend')
 
-<body>
 
-    <!-- Preloader Start -->
-{{--    zakoci aplikaciju--}}
-{{--    <div id="preloader-active">--}}
-{{--        <div class="preloader d-flex align-items-center justify-content-center">--}}
-{{--            <div class="preloader-inner position-relative">--}}
-{{--                <div class="preloader-circle"></div>--}}
-{{--                <div class="preloader-img pere-text">--}}
-{{--                    <img src="assets/img/logo/logo.png" alt="">--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-    <!-- Preloader Start -->
-
-    <header>
-        <!-- Header Start -->
-       <div class="header-area header-transparrent ">
-            <div class="main-header header-sticky">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2 col-md-1">
-                            <div class="logo">
-                                <a href="index.blade.php"><img src="assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8">
-                            <!-- Main-menu -->
-                            <div class="main-menu f-right d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a href="index.blade.php"> Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.blade.php">Contact</a></li>
-                                        <li><a href="blog/blog.blade.php">Blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog/blog.blade.php">Blog</a></li>
-                                                <li><a href="blog/show.blade.php">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Pages</a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">Element</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-3">
-                            <div class="header-right-btn f-right d-none d-lg-block">
-                                <a href="#" class="btn header-btn">Contact Us</a>
-                            </div>
-                        </div>
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-       </div>
-        <!-- Header End -->
-    </header>
 
     <!-- Slider Area Start-->
     <div class="services-area">
@@ -209,25 +143,6 @@
     <!-- ================ contact section end ================= -->
 
          <!-- have-project Start-->
-         <div class="have-project pt-50">
-            <div class="container">
-                <div class="haveAproject"  data-background="assets/img/team/have.jpg">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-xl-7 col-lg-9 col-md-12">
-                            <div class="wantToWork-caption">
-                                <h2>Have project in mind?</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-3 col-md-12">
-                           <div class="wantToWork-btn f-right">
-                                <a href="#" class="btn btn-ans">Contact Us</a>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+            @include('inc.have-project')
         <!-- have-project End -->
 

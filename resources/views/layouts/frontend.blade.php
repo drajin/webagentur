@@ -38,23 +38,19 @@
                     </div>
                     <div class="col-xl-8 col-lg-8 col-md-8">
                         <!-- Main-menu -->
+                        <div class="row"></div>
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="/"> Home</a></li>
                                     <li><a href="#">About Us</a></li>
                                     <li><a href="#">Services</a></li>
-                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/contact">Kontakt</a></li>
                                     <li><a href="/blog">Blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="/blog">Blog</a></li>
-                                            <li><a href="/blog">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="submenu">
-                                            <li><a href="elements.html">Element</a></li>
-                                        </ul>
+{{--                                        <ul class="submenu">--}}
+{{--                                            <li><a href="/blog">Blog</a></li>--}}
+{{--                                            <li><a href="/blog">Blog Details</a></li>--}}
+{{--                                        </ul>--}}
                                     </li>
                                 </ul>
                             </nav>
@@ -62,7 +58,7 @@
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-3">
                         <div class="header-right-btn f-right d-none d-lg-block">
-                            <a href="#" class="btn header-btn">Contact Us</a>
+                            <a href="/contact" class="btn header-btn">zum Kontakt</a>
                         </div>
                     </div>
                     <!-- Mobile Menu -->
@@ -109,8 +105,8 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">221B Baker Street, P.O Box 353 Park <br> Road, USA - 215431</p>
-                                        <p class="info2">info@yourdomain.com</p>
+                                        <p class="info1">Hannover, Niedersachsen <br> Bahnhofstraße , 30159</p>
+                                        <p class="info2">support@webagentur.com</p>
                                     </div>
                                 </div>
                                 <div class="footer-social">
@@ -131,7 +127,7 @@
                                     <li><a href="about.html">Features</a></li>
                                     <li><a href="single-blog.html">Pricing</a></li>
                                     <li><a href="blog.blade.php">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -139,13 +135,11 @@
                     <div class="col-lg-2 col-md-4 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Support</h4>
+                                <h4>Die neuesten Blogbeiträge</h4>
                                 <ul>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#"> Sitemap</a></li>
-                                    <li><a href="#">FAQs</a></li>
-                                    <li><a href="#">Report a bugb</a></li>
+                                    @foreach($latest_posts as $post)
+                                        <li><a href="#">{{$post->title}}</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

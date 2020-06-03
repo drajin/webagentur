@@ -26,7 +26,8 @@ class PostStoreRequest extends FormRequest
         return [
             'title' => 'required|max:255',
             'slug' => 'required|alpha_dash|max:255|min:5|unique:posts,slug',
-            'body' => 'required'
+            'body' => 'required',
+            'featured_image' => 'sometimes|image'
         ];
     }
 }

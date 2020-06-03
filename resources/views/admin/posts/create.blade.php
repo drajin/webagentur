@@ -34,6 +34,14 @@
                 @enderror
 
                 <div class="form-group">
+                    <label for="featured_image">Upload   Featured Image</label>
+                    <input type="file" class="form-control-file" name="featured_image">
+                </div>
+                @error('featured_image')
+                <div class="text-danger"><small>{{ $message }}</small></div>
+                @enderror
+
+                <div class="form-group">
                     <label for="body">Body</label>
                     {!! $dataTable->text !!}
                     @include('inc.ckeditor')

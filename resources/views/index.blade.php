@@ -321,7 +321,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-5  col-md-8 pr-0">
                         <div class="section-tittle text-center">
-                            <h2>What Client Say About Us</h2>
+                            <h2>Unsere Kunden über uns.</h2>
                         </div>
                     </div>
                 </div>
@@ -332,7 +332,7 @@
                             <div class="single-testimonial text-center">
                                 <div class="testimonial-caption ">
                                     <div class="testimonial-top-cap">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                        <p>angenehme Geschäftspartner, zeitlich Abwicklung sehr professionell – Lieferung termingerecht gehen auf Kunde ein - sehr gute grafische Umsetzung, modern und trendig.</p>
                                     </div>
                                     <!-- founder -->
                                     <div class="testimonial-founder d-flex align-items-center justify-content-center">
@@ -341,7 +341,7 @@
                                         </div>
                                         <div class="founder-text">
                                             <span>Oliva jems</span>
-                                            <p>UIX designer</p>
+                                            <p>Stride Consulting</p>
                                         </div>
                                     </div>
                                 </div>
@@ -349,16 +349,16 @@
                             <div class="single-testimonial text-center">
                                 <div class="testimonial-caption ">
                                     <div class="testimonial-top-cap">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                        <p>Dank der hervorragenden Suchmaschinenoptimierung der Internetagentur ofischer communication, der Umsetzung in der Programmierung und dem Search Engine Marketing mit Google AdWords verzeichnet Teachable jetzt signifikant mehr Anfragen von potentiellen Kunden. Und das sogar aus unseren Wunschbereichen und regional differenziert und steuerbar. </p>
                                     </div>
                                     <!-- founder -->
                                     <div class="testimonial-founder d-flex align-items-center justify-content-center">
                                         <div class="founder-img">
-                                            <img src="assets/img/testmonial/testimonial.png" alt="">
+                                            <img src="assets/img/testmonial/02.png" alt="">
                                         </div>
                                         <div class="founder-text">
-                                            <span>Oliva jems</span>
-                                            <p>UIX designer</p>
+                                            <span>Albuin Knauer</span>
+                                            <p>Geschäftsführer</p>
                                         </div>
                                     </div>
                                 </div>
@@ -377,7 +377,8 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-6 col-md-8 pr-0">
                     <div class="section-tittle text-center">
-                        <h2>Tips and Tricks From Our Exparts</h2>
+                        <h2>Wo wir Sie konkret unterstützen können.</h2>
+                        <p>Moderne Software Entwicklung bringt Sie und Ihr Unternehmen weiter. Legen Sie noch heute den Grundstein für die Zukunft.</p>
                     </div>
                 </div>
             </div>
@@ -388,9 +389,12 @@
                             <img src="assets/img/tips/tips_1.jpg" alt="">
                         </div>
                         <div class="tips-caption">
-                            <h4><a href="#">Twice profit than before you ever got</a></h4>
-                            <span>Continue Reading</span>
-                            <p>March 3, 2020</p>
+                            <h4><a href="#">Digitale Transformation.</a></h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Visuelle UI / UX Konzeption Ihres nächsten Projektes</li>
+                                <li class="list-group-item">Technische Evaluierung welcher TechStack für Ihr Projekt am sinnvollsten ist</li>
+                                <li class="list-group-item">Inhaltliche und funktionale Konzeption. Was ist wirklich das Minimum Viable Product</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -400,9 +404,12 @@
                             <img src="assets/img/tips/tips_2.jpg" alt="">
                         </div>
                         <div class="tips-caption">
-                            <h4><a href="#">Twice profit than before you ever got</a></h4>
-                            <span>Continue Reading</span>
-                            <p>March 3, 2020</p>
+                            <h4><a href="#">Software Audit.</a></h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Analyse Ihrer aktuellen digitalen Prozesse</li>
+                                <li class="list-group-item">Optimierungsvorschläge durch bereits genutzte oder neue Technologien</li>
+                                <li class="list-group-item">Prozessoptimierung durch gezielte Applikations-Entwicklung</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -412,9 +419,12 @@
                             <img src="assets/img/tips/tips_3.jpg" alt="">
                         </div>
                         <div class="tips-caption">
-                            <h4><a href="#">Twice profit than before you ever got</a></h4>
-                            <span>Continue Reading</span>
-                            <p>March 3, 2020</p>
+                            <h4><a href="#">Web application development.</a></h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Analyse Ihrer Systemlandschaft</li>
+                                <li class="list-group-item">Optimierung von Hosting und Infrastruktur</li>
+                                <li class="list-group-item">Maßgeschneiderte Software Lösungen mit höchstem Anspruch</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -423,26 +433,7 @@
     </div>
     <!-- Tips Triks End -->
     <!-- have-project Start-->
-    <div class="have-project">
-        <div class="container">
-            <div class="haveAproject"  data-background="assets/img/team/have.jpg">
-                <div class="row d-flex align-items-center">
-                    <div class="col-xl-7 col-lg-9 col-md-12">
-                        <div class="wantToWork-caption">
-                            <h2>Have project in mind?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-3 col-md-12">
-                        <div class="wantToWork-btn f-right">
-                            <a href="#" class="btn btn-ans">Kontaktieren sie Uns‎</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    @include('inc.have-project')
     <!-- have-project End -->
 
 </main>

@@ -22,6 +22,13 @@
                 @csrf
                 @method('PUT')
 
+                <img class="card-img rounded-0" src="{{asset('images/'.$post->image)}}" alt="">
+                <br><br>
+                <div class="form-group">
+                    <label for="featured_image">Change Featured Image</label>
+                    <input type="file" class="form-control-file" name="featured_image">
+                </div>
+
                 <div class="form-group">
                     <label for="title">Title</label>
                     {!! $dataTable->input !!}
@@ -36,6 +43,10 @@
                 </div>
                 @error('slug')
                     <div class="text-danger"><small>{{ $message }}</small></div>
+                @enderror
+
+                @error('featured_image')
+                <div class="text-danger"><small>{{ $message }}</small></div>
                 @enderror
 
                 <div class="form-group">

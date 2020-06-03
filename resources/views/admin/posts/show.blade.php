@@ -14,6 +14,8 @@
 
     <div class="row">
         <div class="col-md-8">
+            <img class="card-img rounded-0" src="{{asset('images/'.$post->image)}}" alt="">
+            <br><br>
             <h1>{!! $post->title !!}</h1>
             <p class="lead">{!! $post->body!!}</p>
             @foreach($post->tags as $tag)

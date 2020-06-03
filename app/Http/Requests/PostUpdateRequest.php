@@ -33,7 +33,8 @@ class PostUpdateRequest extends FormRequest
                 'min:5',
                 Rule::unique('posts','slug')->ignore($this->post)
             ],
-            'body' => 'required'
+            'body' => 'required',
+            'featured_image' => 'sometimes|image'
         ];
     }
 }
