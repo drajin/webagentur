@@ -126,7 +126,7 @@
                     <div class="we-create-cap">
                         <h3>Wir sind die richtige Agentur für Ihr Projekt, Ihre Kampagne oder Ihre Firma.</h3>
                         <p>Wir entwickeln nach Ihren Vorgaben und Anforderungen Ihre individuelle Webseite. Das sichert Ihnen einen eigenständigen und individuellen Internetauftritt, der Sie und Ihre Webseitenbesucher begeistert. Ganz egal, ob Sie Ihre Internetseiten umgestalten oder neu erstellen möchten, wir bieten Ihnen Erfahrung, Kreativität und ein hohes Maß an Know-how im Webdesign.</p>
-                        <a href="#" class="btn">Kontaktieren sie Uns‎</a>
+                        <a href="/contact" class="btn">Kontaktieren sie Uns‎</a>
                     </div>
                 </div>
             </div>

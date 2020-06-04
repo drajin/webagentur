@@ -47,8 +47,7 @@
                         </div>
                         <div class="navigation-top">
                             <div class="d-sm-flex justify-content-between text-center">
-                                <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
-                                    people like this</p>
+
                                 <div class="col-sm-4 text-center my-2 my-sm-0">
                                     <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
                                 </div>
@@ -102,18 +101,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="blog-author">
-                            <div class="media align-items-center">
-                                <img src="{{asset('assets/img/blog/author.png')}}" alt="">
-                                <div class="media-body">
-                                    <a href="#">
-                                        <h4>Harvard milan</h4>
-                                    </a>
-                                    <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he
-                                        our dominion twon Second divided from</p>
-                                </div>
-                            </div>
-                        </div>
+
                         <div id="comments-area" class="comments-area">
                             <h4>{{count($post->comments)}} Comments</h4>
                             @foreach($post->comments as $comment)

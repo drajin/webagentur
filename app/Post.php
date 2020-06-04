@@ -15,12 +15,18 @@ class Post extends Model
 
     public function getShortContentAttribute()
     {
-        return substr($this->body, 0, 100) . '...';
+        return substr(strip_tags($this->body), 0, 100) . '...';
+        //return str_limit(strip_tags($this->$this->body),100,'...');
     }
 
     public function comments()
     {
         return $this->hasMany(Comment::class);
+    }
+
+    public function scopeSearch($query, $seach)
+    {
+        return $query->where('title', 'LIKE', "%$seach%");
     }
 
 }

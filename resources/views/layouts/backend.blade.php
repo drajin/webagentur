@@ -33,11 +33,10 @@
     <div class="sidebar">
         <ul>
             <li><a href="/" target="_blank"><i class="fas fa-home"></i><span>Veiw Front Page</span></a></li>
-            <li><a href="/admin"><i class="fas fa-network-wired hovered"></i><span>Dashboard</span></a></li>
+            <li><a href="{{route('dashboard')}}"><i class="fas fa-network-wired hovered"></i><span>Dashboard</span></a></li>
             <li><a href="{{route('posts.index')}}"><i class="far fa-edit"></i><span>Posts</span></a></li>
             <li><a href="{{route('tags.index')}}"><i class="fas fa-hashtag"></i><span>Tags</span></a></li>
-            <li><a href="#"><i class="far fa-envelope"></i><span>Messages</span></a></li>
-            <li><a href="#"><i class="far fa-comments"></i><span>Data Table</span></a></li>
+            <li><a href="https://mailtrap.io/inboxes/936984/messages"><i class="far fa-envelope"></i><span>View Messages</span></a></li>
         </ul>
     </div>
 

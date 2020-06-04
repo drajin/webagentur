@@ -6,9 +6,7 @@ Route::group([
     'middleware' => 'auth'
 ], function(){
 
-    Route::get('/',function(){
-       return view('admin.dashboard');
-    });
+    Route::get('/', 'AdminPostsController@dashboard')->name('dashboard');
     //Comments
     Route::get('comments/{comment}/edit', 'AdminCommentsController@edit')->name('comments.edit');
     Route::put('comments/{comment}/edit', 'AdminCommentsController@update')->name('comments.update');

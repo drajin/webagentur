@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PostStoreRequest;
 use App\Post;
 use App\Tag;
+use Illuminate\Support\Facades\Auth;
+
 use App\DataTable\PostsDataTable;
 use Image;
 use Storage;
@@ -171,5 +173,12 @@ class AdminPostsController extends Controller
         }
         $post->delete();
         return redirect()->route('posts.index')->with('success', 'Post removed');
+    }
+
+    public function dashboard()
+    {
+        $user = Auth::user();
+        return view('admin.dashboard', compact('user'));
+
     }
 }

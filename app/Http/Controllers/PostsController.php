@@ -15,13 +15,22 @@ class PostsController extends Controller
      */
     public function index()
     {
+
+        $tags = Tag::all();
         if(request('tag')) {
             $posts = Tag::where('name', request('tag'))->firstOrFail()->posts;
+        } elseif(request('q')) {
+
+            $posts = Post::search(request('q'))->paginate(3);
+
         } else {
+
             $posts = Post::latest()->paginate(5);
+
+
         }
 
-        return view('blog.index', compact('posts'));
+        return view('blog.index', compact('posts', 'tags'));
     }
 
     /**
