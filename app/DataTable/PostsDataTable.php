@@ -15,7 +15,7 @@ class PostsDataTable {
     {
         //reusable $this->input = '<input name="'.$title.'" class="form-control" placeholder="'.$title->ucfirst().'" value="';
         $this->input = '<input name="title" class="form-control" placeholder="Title" value="';
-        $this->input .= $value;
+        $this->input .= old('title', $value);
         $this->input .= '">';
         return $this;
     }
@@ -23,7 +23,7 @@ class PostsDataTable {
     public function slug($value='')
     {
         $this->slug = '<input name="slug" class="form-control" placeholder="Slug" value="';
-        $this->slug .= $value;
+        $this->slug .= old('slug', $value);
         $this->slug .= '">';
         return $this;
     }
@@ -32,7 +32,7 @@ class PostsDataTable {
     {
 
         $this->text = '<textarea id="summary-ckeditor" class="form-control" name="body" rows="10" placeholder="Body">';
-        $this->text .= $value;
+        $this->text .= old('text', $value);
         $this->text .= '</textarea>';
         return $this;
 

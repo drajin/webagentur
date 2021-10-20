@@ -17,7 +17,7 @@
                     <div class="form-row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="title" name="name" class="form-control" value="{{$tag->name}}">
+                                <input type="title" name="name" class="form-control" value="{{old('title', $tag->name)}}">
                                 @error('name')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror

@@ -8,11 +8,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PostStoreRequest;
 use App\Post;
 use App\Tag;
-use Illuminate\Support\Facades\Auth;
-
-use App\DataTable\PostsDataTable;
 use Image;
 use Storage;
+use Illuminate\Support\Facades\Auth;
+use App\DataTable\PostsDataTable;
+
 
 class AdminPostsController extends Controller
 {
@@ -23,10 +23,7 @@ class AdminPostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->paginate(5);
-
-        return view('admin.posts.index',compact('posts'));
-
+        return view('admin.posts.index',['posts' => Post::latest()->paginate(5) ]);
     }
 
     /**
@@ -78,7 +75,6 @@ class AdminPostsController extends Controller
         $post->save();
 
         $post->tags()->sync(request('tags'), false);
-
         return redirect()->route('posts.index')->with('success','Post created successfully!');
     }
 

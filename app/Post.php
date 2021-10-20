@@ -29,4 +29,9 @@ class Post extends Model
         return $query->where('title', 'LIKE', "%$seach%");
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
 }

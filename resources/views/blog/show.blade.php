@@ -133,7 +133,7 @@
                                     <div class="col-12">
                                         <div class="form-group">
                                             <textarea class="form-control w-100" name="body" id="comment" cols="30" rows="9"
-                                        placeholder="Inhalt"></textarea>
+                                        placeholder="Inhalt">{{old('body')}}</textarea>
                                             @error('body')
                                                 <div class="text-danger"><small>{{ $message }}</small></div>
                                             @enderror
@@ -141,7 +141,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input class="form-control" name="author" id="name" type="text" placeholder="Name">
+                                            <input class="form-control" name="author" id="name" type="text" placeholder="Name" value="{{old('author')}}">
                                             @error('author')
                                                 <div class="text-danger"><small>{{ $message }}</small></div>
                                             @enderror
@@ -149,7 +149,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                                            <input class="form-control" name="email" id="email" type="email" placeholder="Email" value="{{old('email')}}">
                                             @error('email')
                                                 <div class="text-danger"><small>{{ $message }}</small></div>
                                             @enderror

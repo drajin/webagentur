@@ -18,7 +18,7 @@
                                 <p data-animation="fadeInLeft" data-delay=".6s">Webdesign zum Festpreis</p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
-                                    <a href="industries.html" class="btn hero-btn">Kontaktieren sie Uns‎</a>
+                                    <a href="/contact" class="btn hero-btn">Kontaktieren sie Uns‎</a>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-tittle text-center">
-                        <h2>Generating New Customers Via Online Mode​​</h2>
+                        <h2>Wie entsteht Ihre Website </h2>
                     </div>
                 </div>
             </div>
@@ -151,9 +151,8 @@
                             <span class="flaticon-chart"></span>
                         </div>
                         <div class="generating-cap">
-                            <h4>All Sizes Business</h4>
-                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                se ultrices gravida. </p>
+                            <h4>Marktanalyse und Planung</h4>
+                            <p>Wir lernen Ihr Unternehmen kennen, analysieren Ihr Konkurrenzumfeld, lassen uns von Best-Cases inspirieren und entwickeln ein individuelles Konzept basierend auf Ihrer Online-Strategie.</p>
                         </div>
                     </div>
                 </div>
@@ -163,9 +162,8 @@
                             <span class="flaticon-social-media-marketing"></span>
                         </div>
                         <div class="generating-cap">
-                            <h4>Awesome Results</h4>
-                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                se ultrices gravida. </p>
+                            <h4>Benutzerfreundliche Struktur und Layout</h4>
+                            <p>Unsere Webseiten zeichnen sich durch leicht verständliche, zielführende Struktur und Logik aus. Für jedes Projekt wird in diesem Schritt der gewünschte Besucher-Verhaltensfluss festgelegt. </p>
                         </div>
                     </div>
                 </div>
@@ -175,9 +173,8 @@
                             <span class="flaticon-speaker"></span>
                         </div>
                         <div class="generating-cap">
-                            <h4>Keep you in the Loop</h4>
-                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                se ultrices gravida. </p>
+                            <h4>Individuelles Design</h4>
+                            <p>In kreativer Zusammenarbeit mit Ihnen entwickeln wir ein attraktives und benutzerfreundliches Webdesign. Dabei schaffen wir die perfekte Verbindung zwischen Ihrem Firmenstil und den aktuellen Online-Trends. Das Ergebnis ist ein harmonisches visuelles Konzept für Ihre eigene einzigartige Homepage.</p>
                         </div>
                     </div>
                 </div>
@@ -187,9 +184,8 @@
                             <span class="flaticon-growth"></span>
                         </div>
                         <div class="generating-cap">
-                            <h4>Significant ROI</h4>
-                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                se ultrices gravida. </p>
+                            <h4>Optimierung für Suchmaschinen (SEO)</h4>
+                            <p>Auf Wunsch führen wir eine fortgeschrittene Optimierung Ihrer Webseite durch. Dies führt zu einer maßgeschnittenen SEO- bzw. SEA-Kampagne.</p>
                         </div>
                     </div>
                 </div>
@@ -258,7 +254,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-6 pr-0">
                     <div class="section-tittle text-center">
-                        <h2>Visit Some Of Our Awsome Stuffs</h2>
+                        <h2>Unsere Referenzen: Machen Sie sich ein Bild!</h2>
                     </div>
                 </div>
             </div>
