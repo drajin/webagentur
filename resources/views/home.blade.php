@@ -16,6 +16,9 @@
 
                     You are logged in!
                 </div>
+                <div class="card-body">
+                    <a href="{{ route('dashboard') }}">View your dashboard</a>
+                </div>
             </div>
         </div>
     </div>

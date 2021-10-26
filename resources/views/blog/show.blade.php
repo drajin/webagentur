@@ -39,7 +39,7 @@
                                     <li><a href="/blog?tag={{$tag->name}}"><i class="fa fa-user"></i>{{$tag->name}}</a></li>
                                     @endforeach
 {{--                                    comments--}}
-                                    <li><a href=""><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href=""><i class="fa fa-comments"></i> {{count($post->comments)}} Comments</a></li>
                                 </ul>
                                 <p>{!! $post->body !!}</p>
 

@@ -37,19 +37,22 @@ Bootstrap theme colorlib.com - #seos
 ### Installation Instructions
 1. Download the archive or clone the project using git `git clone https://github.com/drajin/webagentur.git`
 
-2. Rename `.env.example` file to `.env` or run `cp .env.example .env`.
+2. Rename `.env.example` file to `.env`.
 
    Update `.env` to your specific needs.
+   
+3. Run `cd webagentur`.
+
+4. Run `composer install`.   
 
 4. Run `php artisan migrate`.
 
-5. Run `php artisan serve`.
+5. Run `php artisan key:generate`.
 
-   After installed, you can access `http://localhost:8000` in your browser.
+6. Run `php artisan serve`.
 
-6. Login
+After installed, you can access `http://localhost:8000` in your browser.
+   
+To register and access admin side visit `http://localhost:8000/admin`
 
-   | Email             | Username | Password | Access       |
-   |-------------------|----------|----------|--------------|
-   | admin@urlhub.test | admin    | admin    | Admin Access |
  

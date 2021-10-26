@@ -29,8 +29,13 @@ class AppServiceProvider extends ServiceProvider
 //        {
 //            view()->share('latest_posts',Post::take(3)->latest()->get());
 //        });
-        $latest_posts = Post::take(4)->latest()->get();
-        View::share('latest_posts', $latest_posts);
+        try {
+            $latest_posts = Post::take(4)->latest()->get();
+            View::share('latest_posts', $latest_posts);
+
+        }  catch (\Exception $e) {
+            // do nothing
+        }
 
     }
 }
